@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LayoutPractice</string>
+    <string name="title">title label</string>
+    <string name="subtitle">Subtitle label</string>
+</resources>
