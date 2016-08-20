@@ -8,16 +8,16 @@ import java.util.Date;
 public class Employee {
     private String firstName;
     private String lastName;
-    private Date dob;
+    private String age;
 
-    public Employee(String firstName, String lastName, Date dob) {
+   public Employee(String firstName, String lastName, String age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dob = dob;
+        this.age = age;
     }
 
-    public String getDetails(){
-        String details = "Name: "+firstName+" "+lastName+"\nDob: "+dob;
+    public String getDetails() {
+        String details = "Name: " + firstName + " " + lastName + "\nAge: " + age;
         return details;
     }
 
