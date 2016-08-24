@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         //Executed first before the task starts
         @Override
         protected void onPreExecute() {
-            super.onPreExecute();
             status.setText("Task is starting");
         }
 
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
             bar.setVisibility(View.VISIBLE);
             status.setText("Task Started");
             bar.setProgress(values[0]);
@@ -78,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            super.onPostExecute(s);
             status.setText(s);
             start.setText("restart");
         }
