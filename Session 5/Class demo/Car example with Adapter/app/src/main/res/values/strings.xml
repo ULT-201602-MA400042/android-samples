@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="please_type_car_maker">Please type car maker</string>
+    <string name="please_type_car_model">Please type car model</string>
+    <string name="add">Add</string>
+</resources>

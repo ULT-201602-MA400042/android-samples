@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Mi Aplicacion</string>
+    <string name="please_type_car_maker">Introduzca el fabricante del carro</string>
+    <string name="please_type_car_model">Introduzca el modelo del carro</string>
+    <string name="add">Agregar</string>
+</resources>
