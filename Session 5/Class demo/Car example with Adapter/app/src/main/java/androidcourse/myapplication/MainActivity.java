@@ -28,15 +28,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // Create the Realm configuration
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
         // Open the Realm for the UI thread.
-        _context = Realm.getInstance(realmConfig);
+        Realm.setDefaultConfiguration(realmConfig);
+        _context = Realm.getDefaultInstance();
 
         adapter = new CarAdapter(MainActivity.this,R.layout.row,getAllCarsFromDb());
-
-
 
         listview = (ListView) findViewById(R.id.listView);
         listview.setAdapter(adapter);
@@ -82,4 +80,9 @@ public class MainActivity extends AppCompatActivity {
         return id;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.notifyDataSetChanged();
+    }
 }
